@@ -1,7 +1,7 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import logging
 #logging config
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
 #token input 
