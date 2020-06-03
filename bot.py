@@ -9,6 +9,7 @@ TOKEN = input("Enter the token:")
 updater = Updater(token=TOKEN, use_context=True)
 
 
+''' FUNCTIONS '''
 def start(update, context):#/start command function
     context.bot.send_message(chat_id=update.effective_chat.id, text = "Hello! Send me a sticker and I'll send you it's id.")
 
@@ -30,6 +31,8 @@ updater.dispatcher.add_handler(CommandHandler('start', start))
 updater.dispatcher.add_handler(MessageHandler(Filters.sticker, stickerId))
 
 updater.dispatcher.add_handler(CommandHandler('source', source))
+
+updater.dispatcher.add_handler(MessageHandler(Filters.regex('source'), source))
 
 updater.dispatcher.add_error_handler(error)
 
