@@ -17,6 +17,9 @@ def stickerId(update, context): #get sticker id
     # "update.message.sticker.file_id" its a sticker id
     context.bot.send_message(chat_id=update.effective_chat.id, text = update.message.sticker.file_id)
 
+def source(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text = "The source code of the bot:\ngithub.com/DimaTheCat/Get-Sticker-Id-bot")
+
 def error(update, context):
     logger.warning('Update "%s" caused error "%s"', update, context.error)
 
@@ -25,6 +28,8 @@ def error(update, context):
 updater.dispatcher.add_handler(CommandHandler('start', start))
 
 updater.dispatcher.add_handler(MessageHandler(Filters.sticker, stickerId))
+
+updater.dispatcher.add_handler(CommandHandler('source', source))
 
 updater.dispatcher.add_error_handler(error)
 
