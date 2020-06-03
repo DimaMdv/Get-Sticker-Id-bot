@@ -4,9 +4,8 @@ import logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
-#token input 
-TOKEN = input("Enter the token:")
-updater = Updater(token=TOKEN, use_context=True)
+ 
+updater = Updater(token='TOKEN', use_context=True)
 
 
 ''' FUNCTIONS '''
