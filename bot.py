@@ -15,7 +15,7 @@ def stickerId(update, context): #get sticker id
 ''' HANDLERS '''
 updater.dispatcher.add_handler(CommandHandler('start', start))
 
-dispatcher.add_handler(MessageHandler(Filters.sticker, stickerId))
+updater.dispatcher.add_handler(MessageHandler(Filters.sticker, stickerId))
 
 updater.start_polling()
 updater.idle()
