@@ -5,7 +5,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
  
-updater = Updater(token='1118171153:AAEZ6074EIJMRJiq1rg1WNlee9v6pUazY2s', use_context=True)
+updater = Updater(token='TOKEN', use_context=True)
 
 
 ''' FUNCTIONS '''
