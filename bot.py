@@ -5,7 +5,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
  
-updater = Updater(token='TOKEN', use_context=True)
+updater = Updater(token='1118171153:AAEZ6074EIJMRJiq1rg1WNlee9v6pUazY2s', use_context=True)
 
 
 ''' FUNCTIONS '''
@@ -13,7 +13,7 @@ def start(update, context):#/start command function
     context.bot.send_message(chat_id=update.effective_chat.id, text = "Hello! Send me a sticker and I'll send you it's id.")
 
 def stickerId(update, context): #get sticker id
-    context.bot.send_message(chat_id=update.effective_chat.id, text = "Here this sticker's id:")
+    context.bot.send_message(chat_id=update.effective_chat.id, text = "Here this sticker id:")
     # "update.message.sticker.file_id" its a sticker id
     context.bot.send_message(chat_id=update.effective_chat.id, text = update.message.sticker.file_id)
 
