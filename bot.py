@@ -18,7 +18,7 @@ def stickerId(update, context): #get sticker id
     context.bot.send_message(chat_id=update.effective_chat.id, text = update.message.sticker.file_id)
 
 def source(update, context):
-    context.bot.send_message(chat_id=update.effective_chat.id, text = "The source code of the bot:\ngithub.com/DimaTheCat/Get-Sticker-Id-bot")
+    context.bot.send_message(chat_id=update.effective_chat.id, text = "The source code of the bot:\ngithub.com/DimaMdv/Get-Sticker-Id-bot")
 
 def error(update, context):
     logger.warning('Update "%s" caused error "%s"', update, context.error)
