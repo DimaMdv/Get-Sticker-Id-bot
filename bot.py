@@ -13,7 +13,7 @@ def start(update, context):#/start command function
     context.bot.send_message(chat_id=update.effective_chat.id, text = "Hello! Send me a sticker and I'll send you it's id.")
 
 def stickerId(update, context): #get sticker id
-    context.bot.send_message(chat_id=update.effective_chat.id, text = "Here this sticker id:")
+    context.bot.send_message(chat_id=update.effective_chat.id, text = "Here this sticker's id:")
     # "update.message.sticker.file_id" its a sticker id
     context.bot.send_message(chat_id=update.effective_chat.id, text = update.message.sticker.file_id)
 
